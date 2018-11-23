@@ -10,9 +10,14 @@ import UIKit
 
 class ViewController: UIViewController {
 
+	var randomUserService: RandomUserService!
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		// Do any additional setup after loading the view, typically from a nib.
+		randomUserService = RandomUserService()
+		randomUserService.getUsers() { users in
+			users.forEach { print($0) }
+		}
 	}
 
 
