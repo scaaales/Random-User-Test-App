@@ -10,8 +10,11 @@
 		B3180A1321A85D32000A3AD1 /* RandomUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3180A1221A85D32000A3AD1 /* RandomUserService.swift */; };
 		B3180A1521A875B6000A3AD1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3180A1421A875B6000A3AD1 /* User.swift */; };
 		B3180A1721A87933000A3AD1 /* UsersResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3180A1621A87933000A3AD1 /* UsersResult.swift */; };
+		B3180A2021A993E1000A3AD1 /* IdentifierProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3180A1F21A993E1000A3AD1 /* IdentifierProtocol.swift */; };
+		B3180A2221A99535000A3AD1 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3180A2121A99535000A3AD1 /* UserCell.swift */; };
+		B3180A2421A99597000A3AD1 /* LoaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3180A2321A99597000A3AD1 /* LoaderCell.swift */; };
 		B3A839CF21A845F000FC969C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A839CE21A845F000FC969C /* AppDelegate.swift */; };
-		B3A839D121A845F000FC969C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A839D021A845F000FC969C /* ViewController.swift */; };
+		B3A839D121A845F000FC969C /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A839D021A845F000FC969C /* UsersViewController.swift */; };
 		B3A839D421A845F000FC969C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3A839D221A845F000FC969C /* Main.storyboard */; };
 		B3A839D621A8461900FC969C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3A839D521A8461900FC969C /* Assets.xcassets */; };
 		B3A839D921A8461900FC969C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3A839D721A8461900FC969C /* LaunchScreen.storyboard */; };
@@ -25,9 +28,12 @@
 		B3180A1221A85D32000A3AD1 /* RandomUserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomUserService.swift; sourceTree = "<group>"; };
 		B3180A1421A875B6000A3AD1 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B3180A1621A87933000A3AD1 /* UsersResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersResult.swift; sourceTree = "<group>"; };
+		B3180A1F21A993E1000A3AD1 /* IdentifierProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentifierProtocol.swift; sourceTree = "<group>"; };
+		B3180A2121A99535000A3AD1 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		B3180A2321A99597000A3AD1 /* LoaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderCell.swift; sourceTree = "<group>"; };
 		B3A839CB21A845F000FC969C /* Random User Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Random User Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3A839CE21A845F000FC969C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B3A839D021A845F000FC969C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B3A839D021A845F000FC969C /* UsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewController.swift; sourceTree = "<group>"; };
 		B3A839D321A845F000FC969C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B3A839D521A8461900FC969C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B3A839D821A8461900FC969C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -75,7 +81,7 @@
 		B3180A1921A87A52000A3AD1 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				B3A839D021A845F000FC969C /* ViewController.swift */,
+				B3A839D021A845F000FC969C /* UsersViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -86,6 +92,24 @@
 				B3180A1221A85D32000A3AD1 /* RandomUserService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		B3180A1B21A99395000A3AD1 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				B3180A1F21A993E1000A3AD1 /* IdentifierProtocol.swift */,
+				B3180A2121A99535000A3AD1 /* UserCell.swift */,
+				B3180A2321A99597000A3AD1 /* LoaderCell.swift */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		B3180A1D21A993A7000A3AD1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B3180A1B21A99395000A3AD1 /* TableView */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		B3A839C221A845EE00FC969C = {
@@ -110,8 +134,9 @@
 			isa = PBXGroup;
 			children = (
 				B3A839CE21A845F000FC969C /* AppDelegate.swift */,
-				B3180A1921A87A52000A3AD1 /* Controllers */,
 				B3180A1821A87A2C000A3AD1 /* Model */,
+				B3180A1921A87A52000A3AD1 /* Controllers */,
+				B3180A1D21A993A7000A3AD1 /* View */,
 				B3180A1A21A87A5F000A3AD1 /* Services */,
 				B3A839D221A845F000FC969C /* Main.storyboard */,
 				B3A839D521A8461900FC969C /* Assets.xcassets */,
@@ -244,10 +269,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3180A1521A875B6000A3AD1 /* User.swift in Sources */,
-				B3A839D121A845F000FC969C /* ViewController.swift in Sources */,
+				B3A839D121A845F000FC969C /* UsersViewController.swift in Sources */,
+				B3180A2421A99597000A3AD1 /* LoaderCell.swift in Sources */,
 				B3A839CF21A845F000FC969C /* AppDelegate.swift in Sources */,
 				B3180A1721A87933000A3AD1 /* UsersResult.swift in Sources */,
+				B3180A2021A993E1000A3AD1 /* IdentifierProtocol.swift in Sources */,
 				B3180A1321A85D32000A3AD1 /* RandomUserService.swift in Sources */,
+				B3180A2221A99535000A3AD1 /* UserCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

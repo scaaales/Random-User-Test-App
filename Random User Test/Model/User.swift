@@ -9,10 +9,15 @@
 import Foundation
 
 struct User: Decodable {
-	struct Name: Decodable {
-		let title: String
+	private struct Name: Decodable {
 		let first: String
 		let last: String
+	}
+	
+	struct Location: Decodable {
+		let street: String
+		let city: String
+		let state: String
 	}
 	
 	struct Picture: Decodable {
@@ -20,34 +25,31 @@ struct User: Decodable {
 	}
 	
 	private struct Dob: Decodable {
-		let date: Date?
+		let date: String
+		let age: Int
 	}
 	
 	let gender: String
-	let name: Name
+	
+	let location: Location
+	
+	private let name: Name
+	var fullName: String {
+		return "\(name.first) \(name.last)".capitalized
+	}
 	let email: String
+	
 	private let dob: Dob
 	var dateOfBirth: String? {
-		if let date = dob.date {
-			let dateFormatter = DateFormatter()
-			dateFormatter.dateFormat = "YYYY-MM-dd"
-			return dateFormatter.string(from: date)
-		}
-		return nil
+		return dob.date.components(separatedBy: "T").first
 	}
+	var age: Int {
+		return dob.age
+	}
+	
 	let phone: String
 	let cell: String
 	let picture: Picture
 	
 }
 
-extension User: CustomStringConvertible {
-	var description: String {
-		return """
-		User name = \(name.title) \(name.first) \(name.last)
-		Gender = \(gender)
-		Date of Birth = \(dateOfBirth ?? "unknown")
-		---
-		"""
-	}
-}

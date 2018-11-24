@@ -10,13 +10,13 @@ import Alamofire
 
 class RandomUserService {
 
-	typealias CompletionHandler = ([User]) -> Void
+	typealias CompletionHandler = ([User]?) -> Void
 	
 	private let baseURL = "https://randomuser.me"
 	private let apiPath = "/api"
 	private let seed = "scales"
 	
-	private var requestCount = 0
+	private var requestCount = 1
 	
 	func getUsers(completion: @escaping CompletionHandler) {
 		var urlComponents = URLComponents(string: baseURL)
@@ -28,20 +28,17 @@ class RandomUserService {
 		request(url).validate().responseJSON { [weak self] response in
 			let jsonDecoder = JSONDecoder()
 			
-			let dateFormatter = DateFormatter()
-			dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
-			
-			jsonDecoder.dateDecodingStrategy = .formatted(dateFormatter)
-			
 			if let data = response.data {
 				do {
 					let usersResult = try jsonDecoder.decode(UsersResult.self, from: data)
 					self?.requestCount += 1
 					completion(usersResult.results)
+					return
 				} catch {
 					print(error)
 				}
 			}
+			completion(nil)
 		}
 	}
 	
