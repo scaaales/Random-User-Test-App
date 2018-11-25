@@ -37,7 +37,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="VHe-A9-5dQ">
-                                                    <rect key="frame" x="101" y="11.5" width="259" height="76.5"/>
+                                                    <rect key="frame" x="101" y="11.5" width="298" height="76.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Full Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c8D-qe-uRV">
                                                             <rect key="frame" x="0.0" y="0.0" width="78.5" height="23.5"/>
@@ -73,6 +73,7 @@
                                             <outlet property="locationLabel" destination="64b-OG-7l6" id="IL7-ju-xRQ"/>
                                             <outlet property="nameLabel" destination="c8D-qe-uRV" id="y9B-be-eQO"/>
                                             <outlet property="profileImageView" destination="c47-Pa-JJX" id="uoF-c0-Bbi"/>
+                                            <segue destination="dPm-NP-4eU" kind="show" id="7nr-Yv-i88"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="LoaderCell" id="aJa-bb-2sE" customClass="LoaderCell" customModule="Random_User_Test" customModuleProvider="target">
@@ -83,7 +84,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="FDx-QY-dmV">
-                                                    <rect key="frame" x="177.5" y="12" width="20" height="20"/>
+                                                    <rect key="frame" x="197" y="12" width="20" height="20"/>
                                                 </activityIndicatorView>
                                             </subviews>
                                             <constraints>
@@ -114,7 +115,107 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1076" y="96.7016491754123"/>
+            <point key="canvasLocation" x="1031" y="97"/>
+        </scene>
+        <!--User description-->
+        <scene sceneID="m4q-gY-YXi">
+            <objects>
+                <viewController title="User description" id="dPm-NP-4eU" customClass="UserDescriptionViewController" customModule="Random_User_Test" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ATb-ad-6aQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="biv-f6-0tu">
+                                <rect key="frame" x="100" y="88" width="175" height="175"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="biv-f6-0tu" secondAttribute="height" multiplier="1:1" id="UaD-qo-1lk"/>
+                                    <constraint firstAttribute="width" constant="175" id="Z4j-Kf-Zwy"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="4Lw-WD-gHe">
+                                <rect key="frame" x="0.0" y="287" width="375" height="248"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Full name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D6p-ER-ftR">
+                                        <rect key="frame" x="143" y="0.0" width="89.5" height="27.5"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gender" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R9B-9l-EFz">
+                                        <rect key="frame" x="157.5" y="38" width="60" height="23.5"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date of birth" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VEt-fT-p8J">
+                                        <rect key="frame" x="139" y="74" width="97.5" height="23.5"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pwW-Ko-4UM">
+                                        <rect key="frame" x="154.5" y="110" width="66.5" height="23.5"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b2X-hY-YwE">
+                                        <rect key="frame" x="129.5" y="140" width="116" height="36"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                        <state key="normal" title="Phone number">
+                                            <color key="titleColor" red="0.072578646242618561" green="0.075226373970508575" blue="0.83076417446136475" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="phoneTapped:" destination="dPm-NP-4eU" eventType="touchUpInside" id="6ik-QC-sQu"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dY3-nz-aSN">
+                                        <rect key="frame" x="114" y="176" width="147" height="36"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                        <state key="normal" title="Cellphone number">
+                                            <color key="titleColor" red="0.072578646242618561" green="0.075226373970508575" blue="0.83076417446136475" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="cellphoneTapped:" destination="dPm-NP-4eU" eventType="touchUpInside" id="GX9-C5-HgW"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WZx-c4-Tcu">
+                                        <rect key="frame" x="166" y="212" width="43" height="36"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                        <state key="normal" title="Email">
+                                            <color key="titleColor" red="0.072578646242618561" green="0.075226373970508575" blue="0.83076417446136475" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="emailTapped:" destination="dPm-NP-4eU" eventType="touchUpInside" id="ruc-V0-EA6"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="biv-f6-0tu" firstAttribute="top" secondItem="eMq-zd-J0N" secondAttribute="top" constant="24" id="DgX-KL-4od"/>
+                            <constraint firstItem="4Lw-WD-gHe" firstAttribute="top" secondItem="biv-f6-0tu" secondAttribute="bottom" constant="24" id="HhS-0E-VQ1"/>
+                            <constraint firstItem="eMq-zd-J0N" firstAttribute="trailing" secondItem="4Lw-WD-gHe" secondAttribute="trailing" id="Shv-gi-58Z"/>
+                            <constraint firstItem="biv-f6-0tu" firstAttribute="centerX" secondItem="eMq-zd-J0N" secondAttribute="centerX" id="cWn-Uw-azj"/>
+                            <constraint firstItem="4Lw-WD-gHe" firstAttribute="leading" secondItem="eMq-zd-J0N" secondAttribute="leading" id="gVj-Qm-ONK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="eMq-zd-J0N"/>
+                    </view>
+                    <connections>
+                        <outlet property="avatarImageView" destination="biv-f6-0tu" id="J0i-5g-2Hw"/>
+                        <outlet property="cellphoneButton" destination="dY3-nz-aSN" id="qon-PV-ZzY"/>
+                        <outlet property="dateOfBirthLabel" destination="VEt-fT-p8J" id="bCP-9k-bvO"/>
+                        <outlet property="emailButton" destination="WZx-c4-Tcu" id="spD-x0-s8o"/>
+                        <outlet property="genderLabel" destination="R9B-9l-EFz" id="P44-xl-og2"/>
+                        <outlet property="locationLabel" destination="pwW-Ko-4UM" id="dsY-Ob-sSP"/>
+                        <outlet property="nameLabel" destination="D6p-ER-ftR" id="9Sw-bW-caK"/>
+                        <outlet property="phoneButton" destination="b2X-hY-YwE" id="yMp-Fx-oBv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kJc-s6-5hz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1956" y="96.7016491754123"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="y0W-Jr-JzA">

@@ -19,8 +19,7 @@ class UserCell: UITableViewCell, Identifierable {
 	func setup(with user: User) {
 		if let imageURL = URL(string: user.picture.large) {
 			profileImageView.af_setImage(withURL: imageURL)
-			profileImageView.layer.cornerRadius = profileImageView.bounds.height / 2
-			profileImageView.clipsToBounds = false
+			profileImageView.makeRounded()
 		}
 		nameLabel.text = user.fullName
 		ageLabel.text = "\(user.age) year's old"

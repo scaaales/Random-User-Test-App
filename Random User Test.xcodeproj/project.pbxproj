@@ -13,6 +13,8 @@
 		B3180A2021A993E1000A3AD1 /* IdentifierProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3180A1F21A993E1000A3AD1 /* IdentifierProtocol.swift */; };
 		B3180A2221A99535000A3AD1 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3180A2121A99535000A3AD1 /* UserCell.swift */; };
 		B3180A2421A99597000A3AD1 /* LoaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3180A2321A99597000A3AD1 /* LoaderCell.swift */; };
+		B380FD8C21A9FA0E00652454 /* UserDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B380FD8B21A9FA0D00652454 /* UserDescriptionViewController.swift */; };
+		B380FD8F21AA029400652454 /* UIImageView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B380FD8E21AA029400652454 /* UIImageView+extension.swift */; };
 		B3A839CF21A845F000FC969C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A839CE21A845F000FC969C /* AppDelegate.swift */; };
 		B3A839D121A845F000FC969C /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A839D021A845F000FC969C /* UsersViewController.swift */; };
 		B3A839D421A845F000FC969C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3A839D221A845F000FC969C /* Main.storyboard */; };
@@ -31,6 +33,8 @@
 		B3180A1F21A993E1000A3AD1 /* IdentifierProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentifierProtocol.swift; sourceTree = "<group>"; };
 		B3180A2121A99535000A3AD1 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		B3180A2321A99597000A3AD1 /* LoaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderCell.swift; sourceTree = "<group>"; };
+		B380FD8B21A9FA0D00652454 /* UserDescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDescriptionViewController.swift; sourceTree = "<group>"; };
+		B380FD8E21AA029400652454 /* UIImageView+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+extension.swift"; sourceTree = "<group>"; };
 		B3A839CB21A845F000FC969C /* Random User Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Random User Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3A839CE21A845F000FC969C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B3A839D021A845F000FC969C /* UsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewController.swift; sourceTree = "<group>"; };
@@ -82,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				B3A839D021A845F000FC969C /* UsersViewController.swift */,
+				B380FD8B21A9FA0D00652454 /* UserDescriptionViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -112,6 +117,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		B380FD8D21AA027F00652454 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B380FD8E21AA029400652454 /* UIImageView+extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		B3A839C221A845EE00FC969C = {
 			isa = PBXGroup;
 			children = (
@@ -134,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				B3A839CE21A845F000FC969C /* AppDelegate.swift */,
+				B380FD8D21AA027F00652454 /* Extensions */,
 				B3180A1821A87A2C000A3AD1 /* Model */,
 				B3180A1921A87A52000A3AD1 /* Controllers */,
 				B3180A1D21A993A7000A3AD1 /* View */,
@@ -273,9 +287,11 @@
 				B3180A2421A99597000A3AD1 /* LoaderCell.swift in Sources */,
 				B3A839CF21A845F000FC969C /* AppDelegate.swift in Sources */,
 				B3180A1721A87933000A3AD1 /* UsersResult.swift in Sources */,
+				B380FD8F21AA029400652454 /* UIImageView+extension.swift in Sources */,
 				B3180A2021A993E1000A3AD1 /* IdentifierProtocol.swift in Sources */,
 				B3180A1321A85D32000A3AD1 /* RandomUserService.swift in Sources */,
 				B3180A2221A99535000A3AD1 /* UserCell.swift in Sources */,
+				B380FD8C21A9FA0E00652454 /* UserDescriptionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -45,6 +45,12 @@ class UsersViewController: UIViewController {
 		}
 	}
 	
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		if let userDescriptionVC = segue.destination as? UserDescriptionViewController, let selectedRow = tableView.indexPathForSelectedRow?.row {
+			userDescriptionVC.user = users[selectedRow]
+		}
+	}
+	
 }
 
 extension UsersViewController: UITableViewDelegate {
@@ -56,9 +62,7 @@ extension UsersViewController: UITableViewDelegate {
 	}
 	
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-		if indexPath.row == 0 {
-			// TODO: show details screen
-		}
+		tableView.deselectRow(at: indexPath, animated: true)
 	}
 }
 
